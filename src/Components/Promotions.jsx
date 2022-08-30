@@ -1,5 +1,14 @@
 import React from "react";
 
+export const PromotionalCard = ({ date, title }) => {
+    return (
+        <div className="promotional--card">
+            <p className="font--base style20">{date}</p>
+            <h3 className="promotional--card--title font--base style36">{title}</h3>
+        </div>
+    )
+}
+
 const cardsInfo = [
     {
         date: 'до 12.11.2022',
@@ -23,14 +32,14 @@ const cardsInfo = [
 export const Promotions = () => {
     return (
         <div className="promotions--container">
-            <h2 style={{ margin: '48px 0 30px 0' }} className="font-style36">Акции</h2>
+            <h2 style={{ margin: '48px 0 30px 0' }} className="font--base style36">Акции</h2>
             <div className="promotions--cards--container">
                 {cardsInfo.map((item) => {
                     return (
-                        <div className="promotial--card">
-                            <p className="font-style20">{item.date}</p>
-                            <h3 className="primotal--card--title font-style36">{item.title}</h3>
-                        </div>
+                        <PromotionalCard
+                            date={item.date}
+                            title={item.title}
+                        />
                     )
                 })}
             </div>

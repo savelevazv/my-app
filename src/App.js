@@ -12,6 +12,7 @@ import { DownloadTheApp } from './Components/Offer/DownloadTheApp';
 import { Popular } from './Components/Popular/Popular';
 import { Footer } from './Components/Footer';
 import { Arrow } from "./Components/Popular/Arrow"
+import { Divider } from './Components/Divider';
 
 function App() {
 
@@ -36,11 +37,9 @@ function App() {
           />
           <Promotions />
           <Categories />
-          <div style={{ borderBottom: '1px solid #C4C4C4' }}>
-          </div>
+          <Divider />
           <Info />
-          <div style={{ borderBottom: '1px solid #C4C4C4' }}>
-          </div>
+          <Divider />
           <Offer>
             <Subscription />
             <DownloadTheApp />
@@ -56,8 +55,7 @@ function App() {
           />
         </div>
       </CenteredLayout>
-      <div style={{ borderBottom: '1px solid #C4C4C4' }}>
-      </div>
+      <Divider />
       <CenteredLayout>
         <CenteredLayoutBody>
           <Footer
